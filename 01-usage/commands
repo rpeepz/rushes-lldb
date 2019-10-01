@@ -1,0 +1,19 @@
+breakpoint set -a 0x0000000100000cec -c count
+breakpoint set -a 0x0000000100000d3a -c 'count == 1'
+breakpoint set -a 0x0000000100001019
+breakpoint set -a 0x0000000100001075
+continue
+    (number)
+po tab[0] = tab[1]
+continue
+    (number)
+po tab[count] = tab[1]
+continue
+    (number)
+po count = 0
+continue
+continue
+po tmp = (min[0] + min[1] + min[2]) / 3
+continue
+po biggest = (min[0] > min[1] ? (min[0] > min[2] ? min[0] : (min[1] > min[2] ? min[1] : min[2])) : (min[1] > min[2] ? min[1] : (min[0] > min[2] ? min[0] : min[2])))
+continue
